@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+
+      axios.get('/api/games')
+        .then(({ data }) => {
+          console.log(data)
+        })
+        .catch(err => console.error(err))
+
+      axios.get('/api/games/1')
+        .then(({ data }) => {
+          console.log(data)
+        })
+        .catch(err => console.error(err))
+
+      // let game = 
+      // {
+      //   title: 'Hollow Knight',
+      //   developer: 'Team Cherry',
+      //   genre: 'Adventure'
+      // }
+
+      // axios.post('/api/games', game)
+      //   .then(({ data }) => {
+      //     console.log(data)
+      //   })
+      //   .catch(err => console.error(err))
+
+      // let updates = {
+      //   genre: 'Shooter/Arcade'
+      // }
+      // axios.put('/api/games/2', updates)
+      //   .then(() => {
+      //     console.log('Success!')
+      //   })
+      //   .catch(err => console.error(err))
+
+      // axios.delete('/api/games/7')
+      //   .then(() => {
+      //     console.log('Success!')
+      //   })
+      //   .catch(err => console.error(err))
+  </script>
+</body>
+</html>
